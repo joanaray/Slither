@@ -1,0 +1,187 @@
+:root {
+  --color-dark: hsl(206, 24%, 45%);
+  --color-light: hsl(90, 71%, 97%);
+  --font-title: p22-flw-exhibition, sans-serif;
+  --font-main: noka, sans-serif;
+  --footer-height: 74px;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: var(--font-main);
+  font-weight: 300;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+a {
+  color: var(--color-light);
+}
+a:hover {
+  color: hsl(8, 71%, 71%);
+}
+header,
+main,
+footer {
+  width: 100%;
+  padding: 4rem;
+}
+main {
+  flex-grow: 1;
+  padding-bottom: var(--footer-height);
+}
+footer {
+  border-top: 1px solid var(--color-light);
+  position: absolute;
+  bottom: 0;
+  font-size: small;
+  text-transform: uppercase;
+  text-align: right;
+  padding-block: 1rem;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+header {
+  border-bottom: 1px solid var(--color-light);
+  padding-bottom: 1rem;
+}
+hgroup {
+  text-align: center;
+}
+h1 {
+  font-family: var(--font-title);
+  font-size: 5.61em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+h2 {
+  font-size: 4.209em;
+}
+h3 {
+  font-size: 3.157rem;
+}
+h4 {
+  font-size: 2.369rem;
+}
+h5 {
+  font-size: 1.777rem;
+}
+h6 {
+  font-size: 1.333rem;
+}
+.small {
+  font-size: 0.75rem;
+}
+.x-small {
+  font-size: 0.563rem;
+}
+.board-dots, .lines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+.board-dots > div,
+.board-dots button {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-light);
+  border-radius: 100%;
+}
+
+.board-dots button {
+  cursor: pointer;
+}
+.board-dots [id^="R2"] {
+  grid-row: 2;
+}
+
+.board-dots [id^="R3"] {
+  grid-row: 3;
+}
+.board-dots [id^="R4"] {
+  grid-row: 4;
+}
+.board-dots [id$="C2"] {
+  grid-column: 2;
+}
+.board-dots [id$="C3"] {
+  grid-column: 3;
+}
+
+.lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  gap: 0;
+}
+.lines > div {
+  background-color: hsla(90, 71%, 97%, .25);
+  margin-left: 1rem;
+  margin-top: 0;
+}
+.lines .horizontal {
+  width: 4rem;
+  height: 1px;
+}
+.lines .vertical {
+  width: 1px;
+  height: 4rem;
+  margin-left: .5rem;
+}
+
+.lines #R1C2-R1C3 {
+  grid-column: 2;
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+.lines #R1C2-R2C2,
+.lines #R3C2-R4C2,
+.lines #R4C2-R4C3 {
+  grid-column: 2;
+}
+.lines #R3C3-R4C3 {
+  grid-column: 3;
+}
+.lines div[id^='R1'].vertical{
+  margin-top: 0;
+}
+.lines div[id^='R2'].horizontal{
+  grid-row: 3;
+  margin-top: 0;
+}
+.lines div[id^='R2'].vertical{
+  grid-row: 4;
+  margin-top: 0;
+}
+.lines div[id^='R3'].horizontal{
+  grid-row: 5;
+  margin-top: 0;
+}
+.lines div[id^='R3'].vertical{
+  grid-row: 6;
+  margin-top: 0;
+}
+.lines div[id^='R4'].horizontal{
+  grid-row: 7;
+  margin-top: 0;
+}
+

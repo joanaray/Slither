@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slither - a graph theory game coded by Joana Ray</title>
+    <link rel="stylesheet" href="https://use.typekit.net/lux3ypc.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      property="og:title"
+      content="Slither - a graph theory game coded by Joana Ray"
+    />
+    <meta
+      property="og:description"
+      content="Slither is a javascript graph theory game coded by Joana Ray as a front-end exercise."
+    />
+    <meta property="og:url" content="http://joana.cc/slither/" />
+    <meta
+      property="og:image"
+      content="http://joana.cc/slither/slither-thumb.jpg"
+    />
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>Slither</h1>
+        <p>Joana's turning you into a little graph theory nerd.</p>
+      </hgroup>
+    </header>
+    <main>
+      <section>
+        <div class="slither-board">
+          <div class="lines">
+            <div id="R1C2-R1C3" class="horizontal"></div>
+            <div id="R1C2-R2C2" class="vertical"></div>
+            <div id="R1C3-R2C3" class="vertical"></div>
+            <div id="R2C1-R2C2" class="horizontal"></div>
+            <div id="R2C2-R2C3" class="horizontal"></div>
+            <div id="R2C3-R2C4" class="horizontal"></div>
+            <div id="R2C1-R3C1" class="vertical"></div>
+            <div id="R2C2-R3C2" class="vertical"></div>
+            <div id="R2C3-R3C3" class="vertical"></div>
+            <div id="R2C4-R3C4" class="vertical"></div>
+            <div id="R3C1-R3C2" class="horizontal"></div>
+            <div id="R3C2-R3C3" class="horizontal"></div>
+            <div id="R3C3-R3C4" class="horizontal"></div>
+            <div id="R3C2-R4C2" class="vertical"></div>
+            <div id="R3C3-R4C3" class="vertical"></div>
+            <div id="R4C2-R4C3" class="horizontal"></div>
+          </div>
+          <!-- <div class="board-dots">
+          <div id="R1C2"></div>
+          <div id="R1C3"></div>
+          <div id="R2C1"></div>
+          <div id="R2C2"></div>
+          <div id="R2C3"></div>
+          <div id="R2C4"></div>
+          <div id="R3C1"></div>
+          <div id="R3C2"></div>
+          <div id="R3C3"></div>
+          <div id="R3C4"></div>
+          <div id="R4C2"></div>
+          <div id="R4C3"></div>
+        </div> -->
+          <div class="board-dots">
+            <button id="R1C2"></button>
+            <button id="R1C3"></button>
+            <button id="R2C1"></button>
+            <button id="R2C2"></button>
+            <button id="R2C3"></button>
+            <button id="R2C4"></button>
+            <button id="R3C1"></button>
+            <button id="R3C2"></button>
+            <button id="R3C3"></button>
+            <button id="R3C4"></button>
+            <button id="R4C2"></button>
+            <button id="R4C3"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <p><a href="http://www.joana.cc/">Joana R.</a> 2024</p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
