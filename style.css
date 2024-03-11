@@ -107,6 +107,10 @@ h6 {
 
 .board-dots button {
   cursor: pointer;
+  background: none;
+}
+.board-dots .active {
+  background-color: var(--color-light);
 }
 .board-dots [id^="R2"] {
   grid-row: 2;
