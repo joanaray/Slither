@@ -1,6 +1,7 @@
 :root {
-  --color-dark: hsl(206, 24%, 45%);
+  --color-dark: #57768e;
   --color-light: hsl(90, 71%, 97%);
+  --color-computer:hsl(2, 100%, 85%);
   --font-title: p22-flw-exhibition, sans-serif;
   --font-main: noka, sans-serif;
   --footer-height: 74px;
@@ -111,6 +112,9 @@ h6 {
 }
 .board-dots .active {
   background-color: var(--color-light);
+}
+.board-dots .active.pc {
+  background-color: var(--color-computer);
 }
 .board-dots [id^="R2"] {
   grid-row: 2;
