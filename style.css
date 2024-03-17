@@ -93,6 +93,14 @@ h6 {
 .x-small {
   font-size: 0.563rem;
 }
+.results{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
 .board-dots, .lines {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -110,10 +118,10 @@ h6 {
   cursor: pointer;
   background: none;
 }
-.board-dots .active {
+.board-dots .user {
   background-color: var(--color-light);
 }
-.board-dots .active.pc {
+.board-dots .pc {
   background-color: var(--color-computer);
 }
 .board-dots [id^="R2"] {
