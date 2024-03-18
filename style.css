@@ -1,7 +1,8 @@
 :root {
-  --color-dark: #57768e;
+  --color-dark: hsl(206, 24%, 45%); /* #57768e */
+  --color-darker: hsl(206, 24%, 25%); /* #30424f */
   --color-light: hsl(90, 71%, 97%);
-  --color-computer:hsl(2, 100%, 85%);
+  --color-computer: hsl(2, 100%, 85%);
   --font-title: p22-flw-exhibition, sans-serif;
   --font-main: noka, sans-serif;
   --footer-height: 74px;
@@ -84,8 +85,33 @@ h4 {
 h5 {
   font-size: 1.777rem;
 }
-h6 {
+h6,
+.lead {
   font-size: 1.333rem;
+}
+button {
+  border: 1px solid var(--color-light);
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+}
+button:hover,
+button:focus {
+  background-color: var(--color-darker);
+}
+button:active{
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 .small {
   font-size: 0.75rem;
@@ -93,7 +119,7 @@ h6 {
 .x-small {
   font-size: 0.563rem;
 }
-.results{
+.results {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,22 +127,19 @@ h6 {
   gap: 1rem;
   margin-bottom: 4rem;
 }
-.board-dots, .lines {
+.board-dots,
+.lines {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4rem;
 }
-.board-dots > div,
 .board-dots button {
   width: 1rem;
   height: 1rem;
+  min-width: 0;
+  padding: 0;
   border: 1px solid var(--color-light);
   border-radius: 100%;
-}
-
-.board-dots button {
-  cursor: pointer;
-  background: none;
 }
 .board-dots .user {
   background-color: var(--color-light);
@@ -150,9 +173,12 @@ h6 {
   gap: 0;
 }
 .lines > div {
-  background-color: hsla(90, 71%, 97%, .25);
+  background-color: hsla(90, 71%, 97%, 0.25);
   margin-left: 1rem;
   margin-top: 0;
+}
+.lines .active {
+  background-color: hsla(90, 71%, 97%, 1);
 }
 .lines .horizontal {
   width: 4rem;
@@ -161,13 +187,13 @@ h6 {
 .lines .vertical {
   width: 1px;
   height: 4rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .lines #R1C2-R1C3 {
   grid-column: 2;
   margin-left: 1rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .lines #R1C2-R2C2,
 .lines #R3C2-R4C2,
@@ -177,27 +203,26 @@ h6 {
 .lines #R3C3-R4C3 {
   grid-column: 3;
 }
-.lines div[id^='R1'].vertical{
+.lines div[id^="R1"].vertical {
   margin-top: 0;
 }
-.lines div[id^='R2'].horizontal{
+.lines div[id^="R2"].horizontal {
   grid-row: 3;
   margin-top: 0;
 }
-.lines div[id^='R2'].vertical{
+.lines div[id^="R2"].vertical {
   grid-row: 4;
   margin-top: 0;
 }
-.lines div[id^='R3'].horizontal{
+.lines div[id^="R3"].horizontal {
   grid-row: 5;
   margin-top: 0;
 }
-.lines div[id^='R3'].vertical{
+.lines div[id^="R3"].vertical {
   grid-row: 6;
   margin-top: 0;
 }
-.lines div[id^='R4'].horizontal{
+.lines div[id^="R4"].horizontal {
   grid-row: 7;
   margin-top: 0;
 }
-
